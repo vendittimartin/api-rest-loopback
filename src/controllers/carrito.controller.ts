@@ -4,18 +4,12 @@ import {
   Filter,
   FilterExcludingWhere,
   repository,
-  Where,
+  Where
 } from '@loopback/repository';
 import {
-  post,
-  param,
-  get,
-  getModelSchemaRef,
-  patch,
-  put,
-  del,
-  requestBody,
-  response,
+  del, get,
+  getModelSchemaRef, param, patch, post, put, requestBody,
+  response
 } from '@loopback/rest';
 import {Carrito} from '../models';
 import {CarritoRepository} from '../repositories';
@@ -23,8 +17,8 @@ import {CarritoRepository} from '../repositories';
 export class CarritoController {
   constructor(
     @repository(CarritoRepository)
-    public carritoRepository : CarritoRepository,
-  ) {}
+    public carritoRepository: CarritoRepository,
+  ) { }
 
   @post('/carrito')
   @response(200, {
